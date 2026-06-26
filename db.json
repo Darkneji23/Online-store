@@ -1,0 +1,169 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Muscle Gain Bowl",
+      "slug": "muscle-gain-bowl",
+      "description": "A high-protein, calorie-dense bowl designed to support muscle growth, strength, and post-workout recovery.",
+      "ingredients": [
+        "Grilled chicken breast",
+        "Quinoa",
+        "Brown rice",
+        "Avocado",
+        "Spinach",
+        "Broccoli",
+        "Edamame",
+        "Olive oil dressing"
+      ],
+      "weight": 420,
+      "calories": 520,
+      "protein": 43,
+      "carbs": 54,
+      "fat": 18,
+      "price": 170,
+      "image": "/images/Bowl.png"
+    },
+    {
+      "id": 2,
+      "name": "Energy Boost Bowl",
+      "slug": "energy-boost-bowl",
+      "description": "A refreshing and energizing bowl packed with fruits, vegetables, and natural ingredients to boost your energy levels and support your active lifestyle.",
+      "ingredients": [
+        "Mixed berries",
+        "Spinach",
+        "Kale",
+        "Banana",
+        "Almond butter"
+      ],
+      "weight": 450,
+      "calories": 600,
+      "protein": 36,
+      "carbs": 75,
+      "fat": 18,
+      "price": 170,
+      "image": "/images/Bowl.png"
+    },
+    {
+      "id": 3,
+      "name": "Weight Loss Bowl",
+      "slug": "weight-loss-bowl",
+      "description": "A low-calorie, high-fiber bowl designed to support weight loss and promote satiety.",
+      "ingredients": [
+        "Mixed greens",
+        "Cherry tomatoes",
+        "Cucumber",
+        "Red onion",
+        "Lemon juice"
+      ],
+      "weight": 380,
+      "calories": 390,
+      "protein": 38,
+      "carbs": 32,
+      "fat": 14,
+      "price": 170,
+      "image": "/images/Bowl.png"
+    },
+    {
+      "id": 4,
+      "name": "Recovery Bowl",
+      "slug": "recovery-bowl",
+      "description": "A nutrient-dense bowl designed to support muscle recovery and reduce inflammation after intense workouts.",
+      "ingredients": [
+        "Grilled salmon",
+        "Sweet potato",
+        "Broccoli",
+        "Kale",
+        "Avocado"
+      ],
+      "weight": 430,
+      "calories": 500,
+      "protein": 40,
+      "carbs": 50,
+      "fat": 16,
+      "price": 170,
+      "image": "/images/Bowl.png"
+    },
+    {
+      "id": 5,
+      "name": "Daily Balance Bowl",
+      "slug": "daily-balance-bowl",
+      "description": "A well-balanced bowl with a perfect combination of macronutrients to support your daily nutritional needs.",
+      "ingredients": [
+        "Grilled chicken breast",
+        "Quinoa",
+        "Mixed greens",
+        "Cherry tomatoes",
+        "Cucumber",
+        "Olive oil dressing"
+      ],
+      "weight": 420,
+      "calories": 480,
+      "protein": 35,
+      "carbs": 55,
+      "fat": 16,
+      "price": 170,
+      "image": "/images/Bowl.png"
+    },
+    {
+      "id": 6,
+      "name": "Breakfast Bowl",
+      "slug": "breakfast-bowl",
+      "description": "A hearty breakfast bowl packed with wholesome ingredients to fuel your day.",
+      "ingredients": [
+        "Oatmeal",
+        "Mixed berries",
+        "Spinach",
+        "Banana",
+        "Almond butter"
+      ],
+      "weight": 400,
+      "calories": 450,
+      "protein": 28,
+      "carbs": 60,
+      "fat": 14,
+      "price": 170,
+      "image": "/images/Bowl.png"
+    },
+    {
+      "id": 7,
+      "name": "Lunch Bowl",
+      "slug": "lunch-bowl",
+      "description": "A nutritious lunch bowl packed with a variety of vegetables, grains, and lean proteins.",
+      "ingredients": [
+        "Quinoa",
+        "Cherry tomatoes",
+        "Cucumber",
+        "Red onion",
+        "Lemon juice"
+      ],
+      "weight": 420,
+      "calories": 520,
+      "protein": 38,
+      "carbs": 58,
+      "fat": 17,
+      "price": 170,
+      "image": "/images/Bowl.png"
+    },
+    {
+      "id": 8,
+      "name": "Dinner Bowl",
+      "slug": "dinner-bowl",
+      "description": "A satisfying dinner bowl packed with a variety of vegetables, grains, and lean proteins.",
+      "ingredients": [
+        "Grilled chicken breast",
+        "Quinoa",
+        "Mixed greens",
+        "Cherry tomatoes",
+        "Cucumber",
+        "Olive oil dressing"
+      ],
+      "weight": 410,
+      "calories": 420,
+      "protein": 40,
+      "carbs": 35,
+      "fat": 15,
+      "price": 170,
+      "image": "/images/Bowl.png"
+    }
+  ]
+}
