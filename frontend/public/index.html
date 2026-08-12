@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Simple ecommerce project" />
     <title>E-commerce Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -12,28 +18,151 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <header>
-      <div class="header_brand">
-        <h1>GoalFuel Nutrition</h1>
-      </div>
-      <nav class="header_navigation">
-        <ul>
-          <li>
-            <a href="#"><i class="fa-solid fa-bars"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-regular fa-circle-user"></i></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main></main>
+    <div class="hero-area">
+      <header>
+        <div class="header_brand">
+          <h1>GoalFuel Nutrition</h1>
+        </div>
+        <nav class="header_navigation">
+          <ul>
+            <li>
+              <a href="#"><i class="fa-solid fa-bars"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="hero">
+        <div class="hero__content">
+          <h1>Stop choosing<br />between fast and<br />healthy.</h1>
+          <p>
+            Goal-based nutrition built for people who don’t have time to waste.
+          </p>
+        </div>
+      </section>
+    </div>
+    <main>
+      <section class="menu">
+        <div class="menu__title">
+          <h2 class="menu__subtitle">What do you need today?</h2>
+          <div class="menu__line"></div>
+        </div>
+        <div class="menu__cards" id="menuItems">
+          <article class="menu__card">
+            <img
+              class="menu__card-image"
+              src="/images/Bowl.png"
+              alt="Dinner Bowl"
+            />
+            <h3 class="menu__card-title">Muscle Gain Bowl</h3>
+            <div class="menu__card-macros"></div>
+            <div class="menu__card-footer">
+              <span class="menu__card-price">170 NOK</span>
+              <button class="menu__card-button" type="button">Add</button>
+            </div>
+          </article>
+          <article class="menu__card">
+            <img
+              class="menu__card-image"
+              src="/images/Bowl.png"
+              alt="Dinner Bowl"
+            />
+            <h3 class="menu__card-title">Energy Boost Bowl</h3>
+            <div class="menu__card-macros"></div>
+            <div class="menu__card-footer">
+              <span class="menu__card-price">170 NOK</span>
+              <button class="menu__card-button" type="button">Add</button>
+            </div>
+          </article>
+          <article class="menu__card">
+            <img
+              class="menu__card-image"
+              src="/images/Bowl.png"
+              alt="Dinner Bowl"
+            />
+            <h3 class="menu__card-title">Weight Loss Bowl</h3>
+            <div class="menu__card-macros"></div>
+            <div class="menu__card-footer">
+              <span class="menu__card-price">170 NOK</span>
+              <button class="menu__card-button" type="button">Add</button>
+            </div>
+          </article>
+          <article class="menu__card">
+            <img
+              class="menu__card-image"
+              src="/images/Bowl.png"
+              alt="Dinner Bowl"
+            />
+            <h3 class="menu__card-title">Recovery Bowl</h3>
+            <div class="menu__card-macros"></div>
+            <div class="menu__card-footer">
+              <span class="menu__card-price">170 NOK</span>
+              <button class="menu__card-button" type="button">Add</button>
+            </div>
+          </article>
+          <article class="menu__card">
+            <img
+              class="menu__card-image"
+              src="/images/Bowl.png"
+              alt="Dinner Bowl"
+            />
+            <h3 class="menu__card-title">Daily Balance Bowl</h3>
+            <div class="menu__card-macros"></div>
+            <div class="menu__card-footer">
+              <span class="menu__card-price">170 NOK</span>
+              <button class="menu__card-button" type="button">Add</button>
+            </div>
+          </article>
+          <article class="menu__card">
+            <img
+              class="menu__card-image"
+              src="/images/Bowl.png"
+              alt="Dinner Bowl"
+            />
+            <h3 class="menu__card-title">Breakfast Bowl</h3>
+            <div class="menu__card-macros"></div>
+            <div class="menu__card-footer">
+              <span class="menu__card-price">170 NOK</span>
+              <button class="menu__card-button" type="button">Add</button>
+            </div>
+          </article>
+          <article class="menu__card">
+            <img
+              class="menu__card-image"
+              src="/images/Bowl.png"
+              alt="Dinner Bowl"
+            />
+            <h3 class="menu__card-title">Lunch Bowl</h3>
+            <div class="menu__card-macros"></div>
+            <div class="menu__card-footer">
+              <span class="menu__card-price">170 NOK</span>
+              <button class="menu__card-button" type="button">Add</button>
+            </div>
+          </article>
+          <article class="menu__card">
+            <img
+              class="menu__card-image"
+              src="/images/Bowl.png"
+              alt="Dinner Bowl"
+            />
+            <h3 class="menu__card-title">Dinner Bowl</h3>
+            <div class="menu__card-macros"></div>
+            <div class="menu__card-footer">
+              <span class="menu__card-price">170 NOK</span>
+              <button class="menu__card-button" type="button">Add</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
     <footer></footer>
     <script type="module" src="/scripts/fetch-request.js"></script>
   </body>

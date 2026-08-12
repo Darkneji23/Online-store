@@ -27,16 +27,26 @@ button {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
   width: 100%;
-  max-width: 1920px;
   height: 65px;
   color: #344034;
 }
+body {
+  background-color: #f8f5f0;
+}
 
+.hero-area {
+  background-image: url("../images/main-background-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .header_brand {
   display: flex;
   align-items: center;
@@ -50,9 +60,10 @@ header {
 }
 
 .header_brand h1 {
-  font-size: clamp(16px, 2.5vw, 32px);
-  font-weight: 700;
-  letter-spacing: 11px;
+  font-family: "inter", sans-serif;
+  font-size: clamp(16px, 2.5vw, 36px);
+  font-weight: 500;
+  letter-spacing: 0.3em;
 }
 
 .header_navigation {
@@ -85,11 +96,96 @@ header {
   height: 44px;
   font-size: 32px;
 }
+.hero {
+  min-height: calc(100vh - 65px);
+  display: flex;
+  align-items: center;
+}
 
-body {
+.hero__content {
+  color: #313b31;
   width: 100%;
-  height: 100%;
-  background-image: url("../images/main-background-image.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-inline: clamp(15px, 4vw, 100px);
+  transform: translateY(-50%);
+}
+.hero__content h1 {
+  letter-spacing: 0.2em;
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(36px, 3.47vw, 60px);
+  line-height: 1.4;
+}
+
+.hero__content p {
+  letter-spacing: 0.2em;
+  max-width: 550px;
+  font-size: clamp(18px, 1.3vw, 24px);
+  line-height: 1.5;
+  font-family: "Abhaya Libre", serif;
+  font-weight: 600;
+}
+.menu {
+  background-color: #f9f9f9;
+
+  margin: clamp(20px, 2vw, 40px);
+  height: auto;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  width: 100%;
+}
+.menu__subtitle {
+  height: auto;
+  width: calc(100% - 60px);
+  font-family: "inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(20px, 1.944vw, 40px);
+  letter-spacing: 0.3em;
+  color: #344034;
+}
+
+.menu__line {
+  width: calc(100% - 60px);
+  height: 3px;
+  background-color: rgb(52, 64, 52, 0.85);
+}
+.menu__cards {
+  --spacing: clamp(20px, 1vw, 40px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing);
+  padding: var(--spacing);
+}
+.menu__card {
+  padding: 7px;
+  border-radius: 7px;
+  height: 440px;
+  box-shadow: inset 0px 0px 3px rgba(49, 59, 49, 0.5);
+}
+
+.menu__card-image {
+  width: 100%;
+  aspect-ratio: 330 / 220;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.menu__card-title {
+  font-family: "inter", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(16px, 1.67vw, 32px);
+  letter-spacing: 0.1em;
+  color: #344034;
 }
