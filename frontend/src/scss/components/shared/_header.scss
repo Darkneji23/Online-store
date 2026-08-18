@@ -1,0 +1,59 @@
+@use "../../utils/variables" as *;
+@use "../../utils/mixins" as *;
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  @include flex-row-between(center);
+  gap: 10px;
+  width: 100%;
+  height: $header-height;
+  color: $color-primary;
+
+  &__brand {
+    @include flex-row-between(center);
+    flex: 7.5;
+    height: $header-element-height;
+    margin-left: 10px;
+    padding-left: 40px;
+    border-radius: $radius-header-brand;
+    background-color: $color-background-header;
+    box-shadow: $shadow-header;
+
+    h1 {
+      font-family: $font-primary;
+      font-size: clamp(16px, 2.5vw, 36px);
+      font-weight: $weight-medium;
+      letter-spacing: $letter-spacing-big;
+    }
+  }
+  &__navigation {
+    @include flex-row-center(center);
+    flex: 2.5;
+    height: $header-element-height;
+    margin-right: 10px;
+    border-radius: $radius-header-navigation;
+    background-color: $color-background-header;
+    box-shadow: $shadow-header;
+
+    ul {
+      margin-inline: clamp(45px, 2vw, 50px);
+      @include flex-row-between(center);
+      width: 100%;
+      gap: clamp(45px, 2vw, 50px);
+    }
+
+    a {
+      @include flex-row-between(center);
+
+      width: 44px;
+      height: 44px;
+      font-size: 32px;
+      transition: color $transition-fast;
+
+      &:hover {
+        color: $color-primary-light;
+      }
+    }
+  }
+}

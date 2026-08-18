@@ -1,0 +1,9 @@
+@use "../../shared/header";
+@use "../../../utils/variables" as *;
+.header {
+  position: static;
+  &__brand,
+  &__navigation {
+    background-color: $color-header-card-info;
+  }
+}

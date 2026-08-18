@@ -16,15 +16,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
-    <div class="hero-area">
-      <header>
-        <div class="header_brand">
+    <div class="hero">
+      <header class="header">
+        <div class="header__brand">
           <h1>GoalFuel Nutrition</h1>
         </div>
-        <nav class="header_navigation">
+        <nav class="header__navigation">
           <ul>
             <li>
               <a href="#"><i class="fa-solid fa-bars"></i></a>
@@ -41,11 +41,11 @@
           </ul>
         </nav>
       </header>
-      <section class="hero">
+      <section class="hero__section">
         <div class="hero__content">
           <h1>Stop choosing<br />between fast and<br />healthy.</h1>
           <p>
-            Goal-based nutrition built for people who don’t have time to waste.
+            Goal-based nutrition built for people who don't have time to waste.
           </p>
         </div>
       </section>
@@ -58,29 +58,34 @@
         </div>
         <div class="menu__cards" id="menuItems">
           <article class="menu__card">
+            <span class="menu__card-info">
+              <a href="/pages/card-info.html"
+                ><i class="fa-solid fa-circle-info"></i
+              ></a>
+            </span>
             <img
               class="menu__card-image"
               src="/images/Muscle_Gain.jpeg"
-              alt="Dinner Bowl"
+              alt="Muscle Gain Bowl"
             />
             <div class="menu__card-content">
               <h3 class="menu__card-title">Muscle Gain Bowl</h3>
               <div class="menu__card-macros">
-                <div class="macro-item">
-                  <span class="macro-label">kcal</span>
-                  <span class="macro-value">520</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">kcal</span>
+                  <span class="menu__card-macro-value">520</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">protein</span>
-                  <span class="macro-value">45g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">protein</span>
+                  <span class="menu__card-macro-value">45g</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">fat</span>
-                  <span class="macro-value">15g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">fat</span>
+                  <span class="menu__card-macro-value">15g</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">carbs</span>
-                  <span class="macro-value">50g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">carbs</span>
+                  <span class="menu__card-macro-value">50g</span>
                 </div>
               </div>
               <div class="menu__card-footer">
@@ -90,29 +95,34 @@
             </div>
           </article>
           <article class="menu__card">
+            <span class="menu__card-info">
+              <a href="/pages/card-info.html"
+                ><i class="fa-solid fa-circle-info"></i
+              ></a>
+            </span>
             <img
               class="menu__card-image"
               src="/images/Energy_Boost.jpeg"
-              alt="Dinner Bowl"
+              alt="Energy Boost Bowl"
             />
             <div class="menu__card-content">
               <h3 class="menu__card-title">Energy Boost Bowl</h3>
               <div class="menu__card-macros">
-                <div class="macro-item">
-                  <span class="macro-label">kcal</span>
-                  <span class="macro-value">520</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">kcal</span>
+                  <span class="menu__card-macro-value">520</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">protein</span>
-                  <span class="macro-value">45g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">protein</span>
+                  <span class="menu__card-macro-value">45g</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">fat</span>
-                  <span class="macro-value">15g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">fat</span>
+                  <span class="menu__card-macro-value">15g</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">carbs</span>
-                  <span class="macro-value">50g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">carbs</span>
+                  <span class="menu__card-macro-value">50g</span>
                 </div>
               </div>
               <div class="menu__card-footer">
@@ -122,29 +132,34 @@
             </div>
           </article>
           <article class="menu__card">
+            <span class="menu__card-info">
+              <a href="/pages/card-info.html"
+                ><i class="fa-solid fa-circle-info"></i
+              ></a>
+            </span>
             <img
               class="menu__card-image"
               src="/images/Weight_Loss.png"
-              alt="Dinner Bowl"
+              alt="Weight Loss Bowl"
             />
             <div class="menu__card-content">
               <h3 class="menu__card-title">Weight Loss Bowl</h3>
               <div class="menu__card-macros">
-                <div class="macro-item">
-                  <span class="macro-label">kcal</span>
-                  <span class="macro-value">520</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">kcal</span>
+                  <span class="menu__card-macro-value">520</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">protein</span>
-                  <span class="macro-value">45g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">protein</span>
+                  <span class="menu__card-macro-value">45g</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">fat</span>
-                  <span class="macro-value">15g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">fat</span>
+                  <span class="menu__card-macro-value">15g</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">carbs</span>
-                  <span class="macro-value">50g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">carbs</span>
+                  <span class="menu__card-macro-value">50g</span>
                 </div>
               </div>
               <div class="menu__card-footer">
@@ -154,29 +169,34 @@
             </div>
           </article>
           <article class="menu__card">
+            <span class="menu__card-info">
+              <a href="/pages/card-info.html"
+                ><i class="fa-solid fa-circle-info"></i
+              ></a>
+            </span>
             <img
               class="menu__card-image"
               src="/images/Recovery.png"
-              alt="Dinner Bowl"
+              alt="Recovery Bowl"
             />
             <div class="menu__card-content">
               <h3 class="menu__card-title">Recovery Bowl</h3>
               <div class="menu__card-macros">
-                <div class="macro-item">
-                  <span class="macro-label">kcal</span>
-                  <span class="macro-value">520</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">kcal</span>
+                  <span class="menu__card-macro-value">520</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">protein</span>
-                  <span class="macro-value">45g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">protein</span>
+                  <span class="menu__card-macro-value">45g</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">fat</span>
-                  <span class="macro-value">15g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">fat</span>
+                  <span class="menu__card-macro-value">15g</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">carbs</span>
-                  <span class="macro-value">50g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">carbs</span>
+                  <span class="menu__card-macro-value">50g</span>
                 </div>
               </div>
               <div class="menu__card-footer">
@@ -186,29 +206,34 @@
             </div>
           </article>
           <article class="menu__card">
+            <span class="menu__card-info">
+              <a href="/pages/card-info.html"
+                ><i class="fa-solid fa-circle-info"></i
+              ></a>
+            </span>
             <img
               class="menu__card-image"
               src="/images/Daily_Balance.jpeg"
-              alt="Dinner Bowl"
+              alt="Daily Balance Bowl"
             />
             <div class="menu__card-content">
               <h3 class="menu__card-title">Daily Balance Bowl</h3>
               <div class="menu__card-macros">
-                <div class="macro-item">
-                  <span class="macro-label">kcal</span>
-                  <span class="macro-value">520</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">kcal</span>
+                  <span class="menu__card-macro-value">520</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">protein</span>
-                  <span class="macro-value">45g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">protein</span>
+                  <span class="menu__card-macro-value">45g</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">fat</span>
-                  <span class="macro-value">15g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">fat</span>
+                  <span class="menu__card-macro-value">15g</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">carbs</span>
-                  <span class="macro-value">50g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">carbs</span>
+                  <span class="menu__card-macro-value">50g</span>
                 </div>
               </div>
               <div class="menu__card-footer">
@@ -218,29 +243,34 @@
             </div>
           </article>
           <article class="menu__card">
+            <span class="menu__card-info">
+              <a href="/pages/card-info.html"
+                ><i class="fa-solid fa-circle-info"></i
+              ></a>
+            </span>
             <img
               class="menu__card-image"
               src="/images/Breakfast.jpeg"
-              alt="Dinner Bowl"
+              alt="Breakfast Bowl"
             />
             <div class="menu__card-content">
               <h3 class="menu__card-title">Breakfast Bowl</h3>
               <div class="menu__card-macros">
-                <div class="macro-item">
-                  <span class="macro-label">kcal</span>
-                  <span class="macro-value">520</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">kcal</span>
+                  <span class="menu__card-macro-value">520</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">protein</span>
-                  <span class="macro-value">45g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">protein</span>
+                  <span class="menu__card-macro-value">45g</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">fat</span>
-                  <span class="macro-value">15g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">fat</span>
+                  <span class="menu__card-macro-value">15g</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">carbs</span>
-                  <span class="macro-value">50g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">carbs</span>
+                  <span class="menu__card-macro-value">50g</span>
                 </div>
               </div>
               <div class="menu__card-footer">
@@ -250,29 +280,34 @@
             </div>
           </article>
           <article class="menu__card">
+            <span class="menu__card-info">
+              <a href="/pages/card-info.html"
+                ><i class="fa-solid fa-circle-info"></i
+              ></a>
+            </span>
             <img
               class="menu__card-image"
               src="/images/Lunch.jpeg"
-              alt="Dinner Bowl"
+              alt="Lunch Bowl"
             />
             <div class="menu__card-content">
               <h3 class="menu__card-title">Lunch Bowl</h3>
               <div class="menu__card-macros">
-                <div class="macro-item">
-                  <span class="macro-label">kcal</span>
-                  <span class="macro-value">520</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">kcal</span>
+                  <span class="menu__card-macro-value">520</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">protein</span>
-                  <span class="macro-value">45g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">protein</span>
+                  <span class="menu__card-macro-value">45g</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">fat</span>
-                  <span class="macro-value">15g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">fat</span>
+                  <span class="menu__card-macro-value">15g</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">carbs</span>
-                  <span class="macro-value">50g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">carbs</span>
+                  <span class="menu__card-macro-value">50g</span>
                 </div>
               </div>
               <div class="menu__card-footer">
@@ -282,6 +317,11 @@
             </div>
           </article>
           <article class="menu__card">
+            <span class="menu__card-info">
+              <a href="/pages/card-info.html"
+                ><i class="fa-solid fa-circle-info"></i
+              ></a>
+            </span>
             <img
               class="menu__card-image"
               src="/images/Dinner.jpeg"
@@ -290,21 +330,21 @@
             <div class="menu__card-content">
               <h3 class="menu__card-title">Dinner Bowl</h3>
               <div class="menu__card-macros">
-                <div class="macro-item">
-                  <span class="macro-label">kcal</span>
-                  <span class="macro-value">520</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">kcal</span>
+                  <span class="menu__card-macro-value">520</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">protein</span>
-                  <span class="macro-value">45g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">protein</span>
+                  <span class="menu__card-macro-value">45g</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">fat</span>
-                  <span class="macro-value">15g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">fat</span>
+                  <span class="menu__card-macro-value">15g</span>
                 </div>
-                <div class="macro-item">
-                  <span class="macro-label">carbs</span>
-                  <span class="macro-value">50g</span>
+                <div class="menu__card-macro">
+                  <span class="menu__card-macro-label">carbs</span>
+                  <span class="menu__card-macro-value">50g</span>
                 </div>
               </div>
               <div class="menu__card-footer">

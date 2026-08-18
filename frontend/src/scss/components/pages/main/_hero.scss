@@ -1,0 +1,35 @@
+@use "../../../utils/variables" as *;
+.hero {
+  background-image: url("../images/main-background-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  &__section {
+    min-height: calc(100vh - #{$header-height});
+    display: flex;
+    align-items: center;
+  }
+  &__content {
+    color: $color-text-hero;
+    width: 100%;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding-inline: clamp(15px, 4vw, 100px);
+    transform: translateY(-50%);
+
+    h1 {
+      letter-spacing: $letter-spacing-medium;
+      font-family: $font-heading;
+      font-weight: $weight-regular;
+      font-size: clamp(36px, 3.47vw, 60px);
+      line-height: 1.4;
+    }
+    p {
+      letter-spacing: $letter-spacing-medium;
+      max-width: 550px;
+      font-size: clamp(18px, 1.3vw, 24px);
+      line-height: 1.5;
+      font-family: $font-body;
+      font-weight: $weight-semibold;
+    }
+  }
+}

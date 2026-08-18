@@ -1,0 +1,112 @@
+@use "../../../utils/variables" as *;
+@use "../../../utils/mixins" as *;
+.product {
+  min-height: calc(100vh - $header-height);
+  @include flex-column-center(center);
+
+  section {
+    background-color: $color-surface;
+    width: calc(100vw - 60px);
+    height: calc(100vh - $header-height - 60px);
+    box-shadow: $shadow-section;
+    @include flex-column-center(center);
+  }
+  &__container {
+    width: $product-container-size;
+    height: $product-container-size;
+    @include flex-row-center;
+    gap: 70px;
+  }
+  &__picture {
+    height: 100%;
+    width: 51.15%;
+    img {
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 2px solid rgba(49, 59, 49, 0.35);
+    }
+  }
+  &__info {
+    color: $color-primary;
+    font-family: $font-secondary;
+    width: 48.85%;
+    letter-spacing: $letter-spacing-medium;
+    @include flex-column-between;
+  }
+  &__title {
+    text-align: left;
+    font-weight: $weight-medium;
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+  &__description,
+  &__ingredients {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: $weight-regular;
+  }
+  &__buy {
+    @include flex-row-between(center);
+    padding: 15px 0;
+    border-top: $border-card-info;
+    border-bottom: $border-card-info;
+    margin: 30px 0;
+    font-size: 24px;
+  }
+  &__quantity {
+    @include flex-row-between(center);
+    gap: 15px;
+  }
+  &__meta {
+    @include flex-row-between;
+    font-size: 28px;
+    font-weight: $weight-medium;
+    border-bottom: $border-card-info;
+    padding: 30px 0;
+  }
+  &__nutrition {
+    width: 100%;
+    h3 {
+      text-align: center;
+      font-size: 28px;
+      font-weight: $weight-semibold;
+      margin-bottom: 20px;
+      letter-spacing: $letter-spacing-nutrition-title;
+      color: $color-primary;
+    }
+    &-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: $font-secondary;
+      color: rgba(52, 64, 52, 0.85);
+      letter-spacing: $letter-spacing-regular;
+      th {
+        font-weight: $weight-semibold;
+        padding-bottom: 12px;
+      }
+      td {
+        font-weight: $weight-medium;
+      }
+
+      th,
+      td {
+        width: calc(100% / 5);
+        height: 80px;
+        text-align: center;
+        font-size: 24px;
+        border-bottom: $border-card-info;
+
+        &:not(:last-child) {
+          border-right: $border-card-info;
+        }
+        &:first-child {
+          text-align: left;
+          font-weight: $weight-semibold;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}

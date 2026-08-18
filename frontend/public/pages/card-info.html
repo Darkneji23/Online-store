@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Simple ecommerce project" />
+    <title>E-commerce Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/card-info.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__brand">
+        <h1>GoalFuel Nutrition</h1>
+      </div>
+      <nav class="header__navigation">
+        <ul>
+          <li>
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="product">
+      <section>
+        <div class="product__container">
+          <div class="product__picture">
+            <img src="/images/Muscle_Gain.jpeg" alt="Muscle Gain Bowl" />
+          </div>
+          <div class="product__info">
+            <div class="product__text">
+              <h2 class="product__title">Muscle Gain Bowl</h2>
+              <p class="product__description">
+                <b>Desctription:</b> A high-protein, calorie-dense bowl designed
+                to support muscle growth, strength, and post-workout recovery.
+              </p>
+              <p class="product__ingredients">
+                <b>Ingredients:</b> Grilled chicken breast, quinoa, brown rice,
+                avocado, spinach, broccoli, edamame, olive oil dressing
+              </p>
+            </div>
+
+            <div class="product__buy">
+              <span class="product__price">170 NOK</span>
+              <div class="product__quantity">
+                <button type="button">-</button>
+                <span>0</span>
+                <button type="button">+</button>
+              </div>
+            </div>
+            <div>
+              <div class="product__nutrition">
+                <h3>Nutrition Information</h3>
+                <table class="product__nutrition-table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Fat</th>
+                      <th>Carbs</th>
+                      <th>Protein</th>
+                      <th>Calories</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Per 100g</td>
+                      <td>5g</td>
+                      <td>15g</td>
+                      <td>12g</td>
+                      <td>145 kcal</td>
+                    </tr>
+                    <tr>
+                      <td>Per Bowl</td>
+                      <td>18g</td>
+                      <td>54g</td>
+                      <td>43g</td>
+                      <td>520 kcal</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="product__meta">
+                <span>Weight: 420g</span>
+                <span>SKU: RB-001</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

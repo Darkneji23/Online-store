@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+body {
+  background-color: rgb(248, 245, 240);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 65px;
+  color: rgb(52, 64, 52);
+}
+.header__brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 7.5;
+  height: 45px;
+  margin-left: 10px;
+  padding-left: 40px;
+  border-radius: 7px 0 0 7px;
+  background-color: rgba(249, 249, 249, 0.8);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+.header__brand h1 {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(16px, 2.5vw, 36px);
+  font-weight: 500;
+  letter-spacing: 0.3em;
+}
+.header__navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 2.5;
+  height: 45px;
+  margin-right: 10px;
+  border-radius: 0 7px 7px 0;
+  background-color: rgba(249, 249, 249, 0.8);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+.header__navigation ul {
+  margin-inline: clamp(45px, 2vw, 50px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: clamp(45px, 2vw, 50px);
+}
+.header__navigation a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  font-size: 32px;
+  transition: color 0.2s ease;
+}
+.header__navigation a:hover {
+  color: rgb(77, 118, 77);
+}
+
+.header {
+  position: static;
+}
+.header__brand, .header__navigation {
+  background-color: rgb(255, 255, 255);
+}
+
+.product {
+  min-height: calc(100vh - 65px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.product section {
+  background-color: rgb(249, 249, 249);
+  width: calc(100vw - 60px);
+  height: calc(100vh - 65px - 60px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.product__container {
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 70px;
+}
+.product__picture {
+  height: 100%;
+  width: 51.15%;
+}
+.product__picture img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid rgba(49, 59, 49, 0.35);
+}
+.product__info {
+  color: rgb(52, 64, 52);
+  font-family: "Inclusive Sans", sans-serif;
+  width: 48.85%;
+  letter-spacing: 0.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.product__title {
+  text-align: left;
+  font-weight: 500;
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+.product__description, .product__ingredients {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 400;
+}
+.product__buy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 1.5px solid rgba(49, 59, 49, 0.35);
+  border-bottom: 1.5px solid rgba(49, 59, 49, 0.35);
+  margin: 30px 0;
+  font-size: 24px;
+}
+.product__quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.product__meta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  font-size: 28px;
+  font-weight: 500;
+  border-bottom: 1.5px solid rgba(49, 59, 49, 0.35);
+  padding: 30px 0;
+}
+.product__nutrition {
+  width: 100%;
+}
+.product__nutrition h3 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.15em;
+  color: rgb(52, 64, 52);
+}
+.product__nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Inclusive Sans", sans-serif;
+  color: rgba(52, 64, 52, 0.85);
+  letter-spacing: 0.1em;
+}
+.product__nutrition-table th {
+  font-weight: 600;
+  padding-bottom: 12px;
+}
+.product__nutrition-table td {
+  font-weight: 500;
+}
+.product__nutrition-table th,
+.product__nutrition-table td {
+  width: 20%;
+  height: 80px;
+  text-align: center;
+  font-size: 24px;
+  border-bottom: 1.5px solid rgba(49, 59, 49, 0.35);
+}
+.product__nutrition-table th:not(:last-child),
+.product__nutrition-table td:not(:last-child) {
+  border-right: 1.5px solid rgba(49, 59, 49, 0.35);
+}
+.product__nutrition-table th:first-child,
+.product__nutrition-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+  padding-left: 5px;
+}
+
+/*# sourceMappingURL=card-info.css.map */
