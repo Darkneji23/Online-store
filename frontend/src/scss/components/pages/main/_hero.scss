@@ -1,35 +1,40 @@
 @use "../../../utils/variables" as *;
+
 .hero {
+  min-height: calc(100vh - $header-height);
   background-image: url("../images/main-background-image.png");
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   &__section {
-    min-height: calc(100vh - #{$header-height});
+    min-height: inherit;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
+
   &__content {
-    color: $color-text-hero;
     width: 100%;
     max-width: $container-max-width;
-    margin: 0 auto;
-    padding-inline: clamp(15px, 4vw, 100px);
-    transform: translateY(-50%);
-
+    margin-inline: auto;
+    padding-inline: clamp(20px, 4vw, 100px);
+    padding-top: clamp(80px, 12vh, 160px);
+    color: $color-text-hero;
     h1 {
-      letter-spacing: $letter-spacing-medium;
+      margin: 0 0 clamp(10px, 1vw, 20px);
       font-family: $font-heading;
       font-weight: $weight-regular;
       font-size: clamp(36px, 3.47vw, 60px);
-      line-height: 1.4;
+      line-height: 1.2;
+      letter-spacing: $letter-spacing-medium;
     }
     p {
-      letter-spacing: $letter-spacing-medium;
       max-width: 550px;
-      font-size: clamp(18px, 1.3vw, 24px);
-      line-height: 1.5;
+      margin: 0;
       font-family: $font-body;
       font-weight: $weight-semibold;
+      font-size: clamp(18px, 1.3vw, 24px);
+      line-height: 1.5;
+      letter-spacing: $letter-spacing-medium;
     }
   }
 }

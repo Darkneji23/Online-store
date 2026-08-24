@@ -1,15 +1,20 @@
+@use "sass:color";
 $color-primary: rgb(52, 64, 52);
+$color-primary-85: color.change($color-primary, $alpha: 0.85);
 $color-primary-light: rgb(77, 118, 77);
 
+$color-hover-light: rgb(227, 227, 227);
+$color-footer: rgb(249, 249, 244);
 $color-background: rgb(248, 245, 240);
 $color-surface: rgb(249, 249, 249);
-$color-header-card-info: rgb(255, 255, 255);
 $color-border: rgb(190, 193, 190);
-$color-border-light: #ccc;
-$color-background-header: rgb(249, 249, 249, 0.8);
+$color-border-light: rgb(204, 204, 204);
+$color-background-header: color.change($color-surface, $alpha: 0.8);
 $color-text-hero: rgb(49, 59, 49);
+$color-header-card-info: rgb(255, 255, 255);
+$color-subscribe-btn: $color-header-card-info;
+$color-stay-updated-text: $color-header-card-info;
 
-$color-hover-light: rgb(227, 227, 227);
 $font-primary: "Inter", sans-serif;
 $font-heading: "Shrikhand", serif;
 $font-body: "Abhaya Libre", serif;
@@ -21,6 +26,8 @@ $container-max-width: 1920px;
 $menu-margin: clamp(20px, 2vw, 40px);
 $card-height: 440px;
 $product-container-size: calc(100% - 100px);
+$content-width: calc(100% - 60px);
+
 $radius-small: 5px;
 $radius-medium: 7px;
 $radius-header-brand: 7px 0 0 7px;
@@ -42,3 +49,4 @@ $letter-spacing-regular: 0.1em;
 $letter-spacing-medium: 0.2em;
 $letter-spacing-big: 0.3em;
 $letter-spacing-nutrition-title: 0.15em;
+$letter-spacing-macro-title: clamp(0.1em, 0.2vw, 0.2em);

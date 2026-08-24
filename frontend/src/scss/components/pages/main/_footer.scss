@@ -1,0 +1,108 @@
+@use "../../../utils/variables" as *;
+@use "../../../utils/mixins" as *;
+.footer-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.stay-updated {
+  @include flex-column-center(center);
+
+  background-color: $color-primary;
+  min-height: 40vh;
+  padding: clamp(40px, 5vw, 80px) clamp(20px, 5vw, 100px);
+  box-sizing: border-box;
+
+  &__content {
+    width: 100%;
+    max-width: 1000px;
+    font-family: $font-primary;
+    @include flex-column-center(center);
+    color: $color-stay-updated-text;
+    margin-bottom: clamp(25px, 3vw, 40px);
+
+    &-title {
+      margin: 0 0 clamp(10px, 1.2vw, 20px);
+      font-weight: $weight-medium;
+      font-size: clamp(36px, 4.4vw, 85px);
+      line-height: 1.1;
+      letter-spacing: clamp(0.05em, 0.2vw, 0.2em);
+      text-align: center;
+    }
+
+    &-text {
+      margin: 0 0 clamp(25px, 2.3vw, 45px);
+      font-weight: $weight-medium;
+      font-size: clamp(14px, 1.25vw, 24px);
+      line-height: 1.5;
+      letter-spacing: clamp(0.05em, 0.15vw, 0.2em);
+      text-align: center;
+    }
+  }
+
+  &-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: min(100%, 700px);
+  }
+
+  &-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: clamp(12px, 0.9vw, 16px) clamp(100px, 9vw, 140px)
+      clamp(12px, 0.9vw, 16px) clamp(16px, 1.25vw, 24px);
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-size: clamp(13px, 0.95vw, 16px);
+    letter-spacing: clamp(0.03em, 0.1vw, 0.1em);
+    color: #333;
+    background-color: #fff;
+    &::placeholder {
+      color: #888;
+    }
+  }
+
+  &-button {
+    position: absolute;
+    right: clamp(4px, 0.3vw, 6px);
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(86, 132, 20);
+    color: $color-subscribe-btn;
+    border: none;
+    padding: clamp(9px, 0.7vw, 12px) clamp(18px, 1.5vw, 28px);
+    border-radius: 50px;
+    font-size: clamp(12px, 0.95vw, 16px);
+    font-weight: $weight-semibold;
+    letter-spacing: clamp(0.03em, 0.1vw, 0.1em);
+    cursor: pointer;
+    transition:
+      background-color $transition-fast,
+      transform $transition-fast;
+
+    &:hover {
+      background-color: $color-primary-light;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  margin: 0 auto;
+  background-color: $color-footer;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1.2fr;
+}
+.footer > div {
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid black;
+  background-color: #333333;
+}

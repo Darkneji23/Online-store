@@ -15,10 +15,15 @@
     flex: 7.5;
     height: $header-element-height;
     margin-left: 10px;
-    padding-left: 40px;
+    padding-left: clamp(30px, 2vw, 50px);
     border-radius: $radius-header-brand;
     background-color: $color-background-header;
     box-shadow: $shadow-header;
+    @media (max-width: 600px) {
+      justify-content: center;
+      text-align: center;
+      padding-inline: 5px;
+    }
 
     h1 {
       font-family: $font-primary;
@@ -37,18 +42,23 @@
     box-shadow: $shadow-header;
 
     ul {
-      margin-inline: clamp(45px, 2vw, 50px);
+      margin-inline: clamp(20px, 2vw, 50px);
       @include flex-row-between(center);
       width: 100%;
-      gap: clamp(45px, 2vw, 50px);
-    }
+      gap: clamp(20px, 2vw, 50px);
 
+      @media (max-width: 600px) {
+        li:nth-child(3) {
+          display: none;
+        }
+      }
+    }
     a {
       @include flex-row-between(center);
 
-      width: 44px;
-      height: 44px;
-      font-size: 32px;
+      width: clamp(20px, 2.2vw, 32px);
+      height: clamp(20px, 2.2vw, 32px);
+      font-size: clamp(20px, 2.2vw, 32px);
       transition: color $transition-fast;
 
       &:hover {
