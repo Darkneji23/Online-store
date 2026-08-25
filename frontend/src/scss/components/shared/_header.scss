@@ -10,6 +10,11 @@
   height: $header-height;
   color: $color-primary;
 
+  @media (max-width: 600px) {
+    gap: 0px;
+    height: auto;
+  }
+
   &__brand {
     @include flex-row-between(center);
     flex: 7.5;
@@ -20,9 +25,11 @@
     background-color: $color-background-header;
     box-shadow: $shadow-header;
     @media (max-width: 600px) {
-      justify-content: center;
       text-align: center;
-      padding-inline: 5px;
+      padding-inline: 10px;
+      margin: 0;
+      box-shadow: none;
+      border-radius: 0;
     }
 
     h1 {
@@ -30,6 +37,9 @@
       font-size: clamp(16px, 2.5vw, 36px);
       font-weight: $weight-medium;
       letter-spacing: $letter-spacing-big;
+      @media (max-width: 600px) {
+        letter-spacing: $letter-spacing-regular;
+      }
     }
   }
   &__navigation {
@@ -40,6 +50,11 @@
     border-radius: $radius-header-navigation;
     background-color: $color-background-header;
     box-shadow: $shadow-header;
+    @media (max-width: 600px) {
+      padding-inline: 5px;
+      margin: 0;
+      box-shadow: none;
+    }
 
     ul {
       margin-inline: clamp(20px, 2vw, 50px);
