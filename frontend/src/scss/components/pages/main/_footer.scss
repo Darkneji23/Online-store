@@ -39,6 +39,12 @@
       letter-spacing: clamp(0.05em, 0.15vw, 0.2em);
       text-align: center;
     }
+    &-break {
+      display: inline;
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
   }
 
   &-form {
@@ -58,10 +64,10 @@
     border-radius: 50px;
     font-size: clamp(13px, 0.95vw, 16px);
     letter-spacing: clamp(0.03em, 0.1vw, 0.1em);
-    color: #333;
-    background-color: #fff;
+    color: rgb(51, 51, 51);
+    background-color: rgb(255, 255, 255);
     &::placeholder {
-      color: #888;
+      color: rgb(136, 136, 136);
     }
   }
 
@@ -94,15 +100,85 @@
   width: 100%;
   margin: 0 auto;
   background-color: $color-footer;
-  height: 60vh;
+  min-height: 60vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1.2fr;
-}
-.footer > div {
-  text-align: center;
-  justify-content: center;
-  padding: 20px;
-  border: 1px solid black;
-  background-color: #333333;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &__content {
+    align-content: center;
+    padding: clamp(15px, 1.5vw, 30px);
+    border: 1px solid $color-text-payment;
+    letter-spacing: $letter-spacing-medium;
+    text-align: center;
+
+    &:nth-child(3n + 1) {
+      text-align: left;
+    }
+
+    &:nth-child(3n) {
+      text-align: right;
+    }
+    @media (max-width: 1200px) {
+      &:nth-child(odd) {
+        text-align: left;
+      }
+      &:nth-child(even) {
+        text-align: right;
+      }
+    }
+
+    @media (max-width: 600px) {
+      &:nth-child(odd),
+      &:nth-child(even) {
+        text-align: center;
+      }
+    }
+
+    &-title {
+      font-size: clamp(24px, 1.714vw, 33px);
+      font-family: $font-primary;
+      font-weight: $weight-medium;
+      color: $color-text-hero;
+      line-height: 2;
+    }
+    &-text {
+      color: $color-text-payment;
+      font-size: clamp(22px, 1.56vw, 30px);
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+  &__payment-types {
+    display: grid;
+    grid-template-columns: repeat(3, clamp(90px, 6.25vw, 120px));
+    gap: clamp(10px, 0.78vw, 15px);
+    justify-content: end;
+    @media (max-width: 600px) {
+      justify-content: center;
+    }
+  }
+
+  &__payment-type {
+    height: clamp(55px, 3.65vw, 70px);
+    border: 1px solid $color-text-hero;
+    border-radius: $radius-medium;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
 }

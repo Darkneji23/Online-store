@@ -11,6 +11,7 @@ $color-border: rgb(190, 193, 190);
 $color-border-light: rgb(204, 204, 204);
 $color-background-header: color.change($color-surface, $alpha: 0.8);
 $color-text-hero: rgb(49, 59, 49);
+$color-text-payment: color.change($color-text-hero, $alpha: 0.5);
 $color-header-card-info: rgb(255, 255, 255);
 $color-subscribe-btn: $color-header-card-info;
 $color-stay-updated-text: $color-header-card-info;

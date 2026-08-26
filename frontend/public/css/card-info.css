@@ -43,6 +43,12 @@ body {
   height: 65px;
   color: rgb(52, 64, 52);
 }
+@media (max-width: 600px) {
+  .header {
+    gap: 0px;
+    height: auto;
+  }
+}
 .header__brand {
   display: flex;
   flex-direction: row;
@@ -51,16 +57,30 @@ body {
   flex: 7.5;
   height: 45px;
   margin-left: 10px;
-  padding-left: 40px;
+  padding-left: clamp(30px, 2vw, 50px);
   border-radius: 7px 0 0 7px;
   background-color: rgba(249, 249, 249, 0.8);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 600px) {
+  .header__brand {
+    text-align: center;
+    padding-inline: 10px;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
 }
 .header__brand h1 {
   font-family: "Inter", sans-serif;
   font-size: clamp(16px, 2.5vw, 36px);
   font-weight: 500;
   letter-spacing: 0.3em;
+}
+@media (max-width: 600px) {
+  .header__brand h1 {
+    letter-spacing: 0.1em;
+  }
 }
 .header__navigation {
   display: flex;
@@ -74,23 +94,35 @@ body {
   background-color: rgba(249, 249, 249, 0.8);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 }
+@media (max-width: 600px) {
+  .header__navigation {
+    padding-inline: 5px;
+    margin: 0;
+    box-shadow: none;
+  }
+}
 .header__navigation ul {
-  margin-inline: clamp(45px, 2vw, 50px);
+  margin-inline: clamp(20px, 2vw, 50px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  gap: clamp(45px, 2vw, 50px);
+  gap: clamp(20px, 2vw, 50px);
+}
+@media (max-width: 600px) {
+  .header__navigation ul li:nth-child(3) {
+    display: none;
+  }
 }
 .header__navigation a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 44px;
-  height: 44px;
-  font-size: 32px;
+  width: clamp(20px, 2.2vw, 32px);
+  height: clamp(20px, 2.2vw, 32px);
+  font-size: clamp(20px, 2.2vw, 32px);
   transition: color 0.2s ease;
 }
 .header__navigation a:hover {
@@ -124,15 +156,14 @@ body {
 .product__container {
   width: calc(100% - 100px);
   height: calc(100% - 100px);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 70px;
 }
-.product__picture {
-  height: 100%;
-  width: 51.15%;
+@media (max-width: 600px) {
+  .product__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .product__picture img {
   border-radius: 10px;
@@ -144,7 +175,6 @@ body {
 .product__info {
   color: rgb(52, 64, 52);
   font-family: "Inclusive Sans", sans-serif;
-  width: 48.85%;
   letter-spacing: 0.2em;
   display: flex;
   flex-direction: column;
