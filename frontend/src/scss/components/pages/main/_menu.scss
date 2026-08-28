@@ -21,7 +21,7 @@
     font-size: clamp(20px, 1.944vw, 40px);
     letter-spacing: 0.3em;
     color: $color-primary;
-    @media (max-width: 600px) {
+    @include mobile {
       text-align: center;
       font-size: 18px;
     }
@@ -29,24 +29,24 @@
   &__line {
     width: $content-width;
     height: 3px;
-    background-color: $color-primary-85;
+    background-color: $color-primary-muted;
   }
   &__cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    @include grid-columns(4);
     gap: $cards-spacing;
     padding: $cards-spacing;
 
-    @media (max-width: 1200px) {
-      grid-template-columns: repeat(3, 1fr);
+    @include desktop {
+      @include grid-columns(3);
     }
 
-    @media (max-width: 900px) {
-      grid-template-columns: repeat(2, 1fr);
+    @include tablet {
+      @include grid-columns(2);
     }
 
-    @media (max-width: 600px) {
-      grid-template-columns: repeat(1, 1fr);
+    @include mobile {
+      @include grid-columns(1);
     }
   }
   &__card {
@@ -73,7 +73,7 @@
       letter-spacing: $letter-spacing-macro-title;
       color: $color-primary;
 
-      @media (max-width: 600px) {
+      @include mobile {
         width: 100%;
         text-align: center;
       }
@@ -83,7 +83,7 @@
       display: flex;
     }
     &-macro {
-      color: $color-primary-85;
+      color: $color-primary-muted;
       flex: 1;
       @include flex-column-between(center);
       position: relative;
@@ -109,7 +109,7 @@
       &-value {
         font-size: clamp(11px, 0.69vw, 13.3px);
         margin-top: 4px;
-        font-weight: $weight-medium;
+        font-weight: $weight-semibold;
       }
     }
     &-footer {

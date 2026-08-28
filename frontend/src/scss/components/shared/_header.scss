@@ -1,16 +1,16 @@
 @use "../../utils/variables" as *;
 @use "../../utils/mixins" as *;
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
   @include flex-row-between(center);
-  gap: 10px;
+  gap: $header-spacing;
   width: 100%;
   height: $header-height;
   color: $color-primary;
 
-  @media (max-width: 600px) {
+  @include mobile {
     gap: 0px;
     height: auto;
   }
@@ -19,14 +19,14 @@
     @include flex-row-between(center);
     flex: 7.5;
     height: $header-element-height;
-    margin-left: 10px;
+    margin-left: $header-spacing;
     padding-left: clamp(30px, 2vw, 50px);
     border-radius: $radius-header-brand;
-    background-color: $color-background-header;
+    background-color: $color-header-background;
     box-shadow: $shadow-header;
-    @media (max-width: 600px) {
+    @include mobile {
       text-align: center;
-      padding-inline: 10px;
+      padding-inline: $header-spacing;
       margin: 0;
       box-shadow: none;
       border-radius: 0;
@@ -37,7 +37,7 @@
       font-size: clamp(16px, 2.5vw, 36px);
       font-weight: $weight-medium;
       letter-spacing: $letter-spacing-big;
-      @media (max-width: 600px) {
+      @include mobile {
         letter-spacing: $letter-spacing-regular;
       }
     }
@@ -46,23 +46,25 @@
     @include flex-row-center(center);
     flex: 2.5;
     height: $header-element-height;
-    margin-right: 10px;
+    margin-right: $header-spacing;
     border-radius: $radius-header-navigation;
-    background-color: $color-background-header;
+    background-color: $color-header-background;
     box-shadow: $shadow-header;
-    @media (max-width: 600px) {
+
+    @include mobile {
       padding-inline: 5px;
       margin: 0;
       box-shadow: none;
+      border-radius: 0;
     }
 
     ul {
-      margin-inline: clamp(20px, 2vw, 50px);
-      @include flex-row-between(center);
+      margin-inline: $header-navigation-spacing;
+      @include flex-row-around(center);
       width: 100%;
-      gap: clamp(20px, 2vw, 50px);
+      gap: $header-navigation-spacing;
 
-      @media (max-width: 600px) {
+      @include mobile {
         li:nth-child(3) {
           display: none;
         }
@@ -71,9 +73,9 @@
     a {
       @include flex-row-between(center);
 
-      width: clamp(20px, 2.2vw, 32px);
-      height: clamp(20px, 2.2vw, 32px);
-      font-size: clamp(20px, 2.2vw, 32px);
+      width: $header-navigation-icon-size;
+      height: $header-navigation-icon-size;
+      font-size: $header-navigation-icon-size;
       transition: color $transition-fast;
 
       &:hover {

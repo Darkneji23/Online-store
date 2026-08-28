@@ -1,11 +1,12 @@
 @use "../../../utils/variables" as *;
 
 .hero {
-  min-height: calc(100vh - $header-height);
+  min-height: calc(100vh);
   background-image: url("../images/main-background-image.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   &__section {
     min-height: inherit;
     display: flex;
@@ -17,8 +18,9 @@
     max-width: $container-max-width;
     margin-inline: auto;
     padding-inline: clamp(20px, 4vw, 100px);
-    padding-top: clamp(80px, 12vh, 160px);
-    color: $color-text-hero;
+    padding-top: clamp(240px, 25vh, 350px);
+    color: $color-text-primary;
+
     h1 {
       margin: 0 0 clamp(10px, 1vw, 20px);
       font-family: $font-heading;
@@ -27,6 +29,7 @@
       line-height: 1.2;
       letter-spacing: $letter-spacing-medium;
     }
+
     p {
       max-width: 550px;
       margin: 0;
@@ -36,6 +39,7 @@
       line-height: 1.5;
       letter-spacing: $letter-spacing-medium;
     }
+
     &__break {
       display: inline;
     }

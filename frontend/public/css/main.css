@@ -31,7 +31,7 @@ body {
 }
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
   display: flex;
@@ -99,13 +99,14 @@ body {
     padding-inline: 5px;
     margin: 0;
     box-shadow: none;
+    border-radius: 0;
   }
 }
 .header__navigation ul {
   margin-inline: clamp(20px, 2vw, 50px);
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   gap: clamp(20px, 2vw, 50px);
@@ -130,7 +131,7 @@ body {
 }
 
 .hero {
-  min-height: calc(100vh - 65px);
+  min-height: 100vh;
   background-image: url("../images/main-background-image.png");
   background-size: cover;
   background-position: center;
@@ -146,7 +147,7 @@ body {
   max-width: 1920px;
   margin-inline: auto;
   padding-inline: clamp(20px, 4vw, 100px);
-  padding-top: clamp(80px, 12vh, 160px);
+  padding-top: clamp(240px, 25vh, 350px);
   color: rgb(49, 59, 49);
 }
 .hero__content h1 {
@@ -301,7 +302,7 @@ body {
 .menu__card-macro-value {
   font-size: clamp(11px, 0.69vw, 13.3px);
   margin-top: 4px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .menu__card-footer {
   display: flex;

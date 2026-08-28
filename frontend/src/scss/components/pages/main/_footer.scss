@@ -1,5 +1,6 @@
 @use "../../../utils/variables" as *;
 @use "../../../utils/mixins" as *;
+
 .footer-section {
   min-height: 100vh;
   display: flex;
@@ -16,10 +17,10 @@
 
   &__content {
     width: 100%;
-    max-width: 1000px;
+    max-width: $footer-content-max-width;
     font-family: $font-primary;
     @include flex-column-center(center);
-    color: $color-stay-updated-text;
+    color: $color-white;
     margin-bottom: clamp(25px, 3vw, 40px);
 
     &-title {
@@ -39,9 +40,11 @@
       letter-spacing: clamp(0.05em, 0.15vw, 0.2em);
       text-align: center;
     }
+
     &-break {
       display: inline;
-      @media (max-width: 600px) {
+
+      @include mobile {
         display: none;
       }
     }
@@ -51,7 +54,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    width: min(100%, 700px);
+    width: min(100%, $subscribe-form-max-width);
   }
 
   &-input {
@@ -61,13 +64,14 @@
       clamp(12px, 0.9vw, 16px) clamp(16px, 1.25vw, 24px);
     border: none;
     outline: none;
-    border-radius: 50px;
+    border-radius: $radius-pill;
     font-size: clamp(13px, 0.95vw, 16px);
     letter-spacing: clamp(0.03em, 0.1vw, 0.1em);
-    color: rgb(51, 51, 51);
-    background-color: rgb(255, 255, 255);
+    color: $color-input-text;
+    background-color: $color-white;
+
     &::placeholder {
-      color: rgb(136, 136, 136);
+      color: $color-placeholder;
     }
   }
 
@@ -76,11 +80,11 @@
     right: clamp(4px, 0.3vw, 6px);
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgb(86, 132, 20);
-    color: $color-subscribe-btn;
+    background-color: $color-accent;
+    color: $color-white;
     border: none;
     padding: clamp(9px, 0.7vw, 12px) clamp(18px, 1.5vw, 28px);
-    border-radius: 50px;
+    border-radius: $radius-pill;
     font-size: clamp(12px, 0.95vw, 16px);
     font-weight: $weight-semibold;
     letter-spacing: clamp(0.03em, 0.1vw, 0.1em);
@@ -102,21 +106,21 @@
   background-color: $color-footer;
   min-height: 60vh;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  @include grid-columns(3);
   grid-template-rows: 1fr 1.2fr;
 
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(2, 1fr);
+  @include desktop {
+    @include grid-columns(2);
   }
 
-  @media (max-width: 600px) {
-    grid-template-columns: repeat(1, 1fr);
+  @include mobile {
+    @include grid-columns(1);
   }
 
   &__content {
     align-content: center;
     padding: clamp(15px, 1.5vw, 30px);
-    border: 1px solid $color-text-payment;
+    border: 1px solid $color-text-secondary;
     letter-spacing: $letter-spacing-medium;
     text-align: center;
 
@@ -127,16 +131,18 @@
     &:nth-child(3n) {
       text-align: right;
     }
-    @media (max-width: 1200px) {
+
+    @include desktop {
       &:nth-child(odd) {
         text-align: left;
       }
+
       &:nth-child(even) {
         text-align: right;
       }
     }
 
-    @media (max-width: 600px) {
+    @include mobile {
       &:nth-child(odd),
       &:nth-child(even) {
         text-align: center;
@@ -147,32 +153,36 @@
       font-size: clamp(24px, 1.714vw, 33px);
       font-family: $font-primary;
       font-weight: $weight-medium;
-      color: $color-text-hero;
+      color: $color-text-primary;
       line-height: 2;
     }
+
     &-text {
-      color: $color-text-payment;
+      color: $color-text-secondary;
       font-size: clamp(22px, 1.56vw, 30px);
     }
+
     iframe {
       width: 100%;
       height: 100%;
       border: 0;
     }
   }
+
   &__payment-types {
     display: grid;
     grid-template-columns: repeat(3, clamp(90px, 6.25vw, 120px));
     gap: clamp(10px, 0.78vw, 15px);
     justify-content: end;
-    @media (max-width: 600px) {
+
+    @include mobile {
       justify-content: center;
     }
   }
 
   &__payment-type {
     height: clamp(55px, 3.65vw, 70px);
-    border: 1px solid $color-text-hero;
+    border: 1px solid $color-text-primary;
     border-radius: $radius-medium;
 
     img {

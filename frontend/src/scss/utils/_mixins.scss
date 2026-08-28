@@ -1,13 +1,8 @@
+@use "../utils/variables" as *;
 @mixin flex-row-between($align-items: stretch) {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: $align-items;
-}
-@mixin flex-row-center($align-items: stretch) {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: $align-items;
 }
 @mixin flex-column-between($align-items: stretch) {
@@ -21,4 +16,36 @@
   flex-direction: column;
   justify-content: center;
   align-items: $align-items;
+}
+
+@mixin flex-row-center($align-items: stretch) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: $align-items;
+}
+@mixin flex-row-around($align-items: stretch) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: $align-items;
+}
+
+@mixin mobile {
+  @media (max-width: $breakpoint-small) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: $breakpoint-medium) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (max-width: $breakpoint-large) {
+    @content;
+  }
+}
+@mixin grid-columns($columns) {
+  grid-template-columns: repeat($columns, 1fr);
 }
