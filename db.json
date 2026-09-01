@@ -21,7 +21,7 @@
       "carbs": 54,
       "fat": 18,
       "price": 170,
-      "image": "/images/Muscle-Gain.jpeg"
+      "image": "/images/Products/Muscle_Gain.jpeg"
     },
     {
       "id": 2,
@@ -41,7 +41,7 @@
       "carbs": 75,
       "fat": 18,
       "price": 170,
-      "image": "/images/Bowl.png"
+      "image": "/images/Products/Energy_Boost.jpeg"
     },
     {
       "id": 3,
@@ -61,7 +61,7 @@
       "carbs": 32,
       "fat": 14,
       "price": 170,
-      "image": "/images/Weight-Loss.png"
+      "image": "/images//Products/Weight_Loss.png"
     },
     {
       "id": 4,
@@ -81,7 +81,7 @@
       "carbs": 50,
       "fat": 16,
       "price": 170,
-      "image": "/images/Recovery.png"
+      "image": "/images/Products/Recovery.png"
     },
     {
       "id": 5,
@@ -102,7 +102,7 @@
       "carbs": 55,
       "fat": 16,
       "price": 170,
-      "image": "/images/Daily-Balance.jpeg"
+      "image": "/images/Products/Daily_Balance.jpeg"
     },
     {
       "id": 6,
@@ -122,7 +122,7 @@
       "carbs": 60,
       "fat": 14,
       "price": 170,
-      "image": "/images/Breakfast.jpeg"
+      "image": "/images/Products/Breakfast.jpeg"
     },
     {
       "id": 7,
@@ -142,7 +142,7 @@
       "carbs": 58,
       "fat": 17,
       "price": 170,
-      "image": "/images/Lunch.jpeg"
+      "image": "/images/Products/Lunch.jpeg"
     },
     {
       "id": 8,
@@ -163,7 +163,7 @@
       "carbs": 35,
       "fat": 15,
       "price": 170,
-      "image": "/images/Dinner.jpeg"
+      "image": "/images/Products/Dinner.jpeg"
     }
   ]
 }
