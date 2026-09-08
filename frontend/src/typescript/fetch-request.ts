@@ -18,7 +18,6 @@ type ProductsResponse = {
 };
 
 const menuItems = document.querySelector("#menuItems");
-console.log("Menu:", menuItems);
 
 if (!menuItems) {
   throw new Error("Menu container not found");
