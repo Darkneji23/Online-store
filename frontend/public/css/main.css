@@ -138,6 +138,7 @@ body {
   background-repeat: no-repeat;
 }
 .hero__section {
+  position: relative;
   min-height: inherit;
   display: flex;
   align-items: flex-start;
@@ -152,8 +153,8 @@ body {
 }
 .hero__content h1 {
   margin: 0 0 clamp(10px, 1vw, 20px);
-  font-family: "Shrikhand", serif;
-  font-weight: 400;
+  font-family: "DM Sans", serif;
+  font-weight: 700;
   font-size: clamp(36px, 3.47vw, 60px);
   line-height: 1.2;
   letter-spacing: 0.2em;
@@ -161,14 +162,24 @@ body {
 .hero__content p {
   max-width: 550px;
   margin: 0;
-  font-family: "Abhaya Libre", serif;
-  font-weight: 600;
+  font-family: "DM Sans", serif;
+  font-weight: 400;
   font-size: clamp(18px, 1.3vw, 24px);
   line-height: 1.5;
   letter-spacing: 0.2em;
 }
-.hero__content__break {
+@media (max-width: 600px) {
+  .hero__content p {
+    font-weight: 500;
+  }
+}
+.hero__content-break {
   display: inline;
+}
+@media (max-width: 600px) {
+  .hero__content-break {
+    display: none;
+  }
 }
 
 .menu {
@@ -349,7 +360,7 @@ body {
 }
 
 .footer-section {
-  min-height: 100vh;
+  height: calc(100vh - 65px);
   display: flex;
   flex-direction: column;
 }
@@ -373,7 +384,6 @@ body {
   justify-content: center;
   align-items: center;
   color: rgb(255, 255, 255);
-  margin-bottom: clamp(25px, 3vw, 40px);
 }
 .stay-updated__content-title {
   margin: 0 0 clamp(10px, 1.2vw, 20px);

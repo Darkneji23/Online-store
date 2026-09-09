@@ -2,7 +2,7 @@
 @use "../../../utils/mixins" as *;
 
 .footer-section {
-  min-height: 100vh;
+  height: calc(100vh - #{$header-height});
   display: flex;
   flex-direction: column;
 }
@@ -21,7 +21,6 @@
     font-family: $font-primary;
     @include flex-column-center(center);
     color: $color-white;
-    margin-bottom: clamp(25px, 3vw, 40px);
 
     &-title {
       margin: 0 0 clamp(10px, 1.2vw, 20px);

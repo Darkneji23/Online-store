@@ -1,4 +1,5 @@
 @use "../../../utils/variables" as *;
+@use "../../../utils/mixins" as *;
 
 .hero {
   min-height: calc(100vh);
@@ -8,6 +9,7 @@
   background-repeat: no-repeat;
 
   &__section {
+    position: relative;
     min-height: inherit;
     display: flex;
     align-items: flex-start;
@@ -24,7 +26,7 @@
     h1 {
       margin: 0 0 clamp(10px, 1vw, 20px);
       font-family: $font-heading;
-      font-weight: $weight-regular;
+      font-weight: $weight-bold;
       font-size: clamp(36px, 3.47vw, 60px);
       line-height: 1.2;
       letter-spacing: $letter-spacing-medium;
@@ -33,15 +35,20 @@
     p {
       max-width: 550px;
       margin: 0;
-      font-family: $font-body;
-      font-weight: $weight-semibold;
+      font-family: $font-heading;
+      font-weight: $weight-regular;
       font-size: clamp(18px, 1.3vw, 24px);
       line-height: 1.5;
       letter-spacing: $letter-spacing-medium;
+      @include mobile {
+        font-weight: $weight-medium;
+      }
     }
-
-    &__break {
+    &-break {
       display: inline;
+      @include mobile {
+        display: none;
+      }
     }
   }
 }
