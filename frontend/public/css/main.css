@@ -72,7 +72,7 @@ body {
   }
 }
 .header__brand h1 {
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: clamp(16px, 2.5vw, 36px);
   font-weight: 500;
   letter-spacing: 0.3em;
@@ -153,7 +153,7 @@ body {
 }
 .hero__content h1 {
   margin: 0 0 clamp(10px, 1vw, 20px);
-  font-family: "DM Sans", serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: clamp(36px, 3.47vw, 60px);
   line-height: 1.2;
@@ -162,7 +162,7 @@ body {
 .hero__content p {
   max-width: 550px;
   margin: 0;
-  font-family: "DM Sans", serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 400;
   font-size: clamp(18px, 1.3vw, 24px);
   line-height: 1.5;
@@ -204,7 +204,7 @@ body {
   margin-top: 5px;
   height: auto;
   width: calc(100% - 60px);
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 400;
   font-size: clamp(20px, 1.944vw, 40px);
   letter-spacing: 0.3em;
@@ -267,7 +267,7 @@ body {
 }
 .menu__card-title {
   margin-top: 5px;
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 500;
   font-size: clamp(20px, 1.67vw, 32px);
   letter-spacing: clamp(0.1em, 0.2vw, 0.2em);
@@ -291,7 +291,7 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  font-family: "Inclusive Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 400;
 }
 .menu__card-macro:not(:last-child)::after {
@@ -321,7 +321,7 @@ body {
   justify-content: space-between;
   align-items: end;
   font-size: clamp(14px, 1.25vw, 24px);
-  font-family: "Inclusive Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 500;
   letter-spacing: 0.1em;
   color: rgb(52, 64, 52);
@@ -378,7 +378,7 @@ body {
 .stay-updated__content {
   width: 100%;
   max-width: 1000px;
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -498,7 +498,7 @@ body {
 }
 .footer__content-title {
   font-size: clamp(24px, 1.714vw, 33px);
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 500;
   color: rgb(49, 59, 49);
   line-height: 2;

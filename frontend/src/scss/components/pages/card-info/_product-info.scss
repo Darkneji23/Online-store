@@ -44,7 +44,7 @@
 
   &__info {
     color: $color-primary;
-    font-family: $font-secondary;
+    font-family: $font-primary;
     letter-spacing: $letter-spacing-medium;
     @include flex-column-between;
   }
@@ -103,7 +103,7 @@
     &-table {
       width: 100%;
       border-collapse: collapse;
-      font-family: $font-secondary;
+      font-family: $font-primary;
       color: $color-primary-muted;
       letter-spacing: $letter-spacing-regular;
 

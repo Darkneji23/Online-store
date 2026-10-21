@@ -87,7 +87,7 @@
       flex: 1;
       @include flex-column-between(center);
       position: relative;
-      font-family: $font-secondary;
+      font-family: $font-primary;
       font-weight: $weight-regular;
 
       &:not(:last-child)::after {
@@ -115,7 +115,7 @@
     &-footer {
       @include flex-row-between(end);
       font-size: clamp(14px, 1.25vw, 24px);
-      font-family: $font-secondary;
+      font-family: $font-primary;
       font-weight: $weight-medium;
       letter-spacing: $letter-spacing-regular;
       color: $color-primary;
