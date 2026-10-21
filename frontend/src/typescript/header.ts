@@ -1,12 +1,12 @@
 async function loadHeader(): Promise<void> {
-  const header = document.querySelector<HTMLElement>("#header");
+	const header = document.querySelector<HTMLElement>('#header');
 
-  if (!header) return;
+	if (!header) return;
 
-  const response = await fetch("../components/header.html");
-  const html = await response.text();
+	const response = await fetch('../components/header.html');
+	const html = await response.text();
 
-  header.innerHTML = html;
+	header.innerHTML = html;
 }
 
 loadHeader();

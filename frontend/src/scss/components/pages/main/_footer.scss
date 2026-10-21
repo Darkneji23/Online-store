@@ -1,193 +1,193 @@
-@use "../../../utils/variables" as *;
-@use "../../../utils/mixins" as *;
+@use '../../../utils/variables' as *;
+@use '../../../utils/mixins' as *;
 
 .footer-section {
-  height: calc(100vh - #{$header-height});
-  display: flex;
-  flex-direction: column;
+	height: calc(100vh - #{$header-height});
+	display: flex;
+	flex-direction: column;
 }
 
 .stay-updated {
-  @include flex-column-center(center);
+	@include flex-column-center(center);
 
-  background-color: $color-primary;
-  min-height: 40vh;
-  padding: clamp(40px, 5vw, 80px) clamp(20px, 5vw, 100px);
-  box-sizing: border-box;
+	background-color: $color-primary;
+	min-height: 40vh;
+	padding: clamp(40px, 5vw, 80px) clamp(20px, 5vw, 100px);
+	box-sizing: border-box;
 
-  &__content {
-    width: 100%;
-    max-width: $footer-content-max-width;
-    font-family: $font-primary;
-    @include flex-column-center(center);
-    color: $color-white;
+	&__content {
+		width: 100%;
+		max-width: $footer-content-max-width;
+		font-family: $font-primary;
+		@include flex-column-center(center);
+		color: $color-white;
 
-    &-title {
-      margin: 0 0 clamp(10px, 1.2vw, 20px);
-      font-weight: $weight-medium;
-      font-size: clamp(36px, 4.4vw, 85px);
-      line-height: 1.1;
-      letter-spacing: clamp(0.05em, 0.2vw, 0.2em);
-      text-align: center;
-    }
+		&-title {
+			margin: 0 0 clamp(10px, 1.2vw, 20px);
+			font-weight: $weight-medium;
+			font-size: clamp(36px, 4.4vw, 85px);
+			line-height: 1.1;
+			letter-spacing: clamp(0.05em, 0.2vw, 0.2em);
+			text-align: center;
+		}
 
-    &-text {
-      margin: 0 0 clamp(25px, 2.3vw, 45px);
-      font-weight: $weight-medium;
-      font-size: clamp(14px, 1.25vw, 24px);
-      line-height: 1.5;
-      letter-spacing: clamp(0.05em, 0.15vw, 0.2em);
-      text-align: center;
-    }
+		&-text {
+			margin: 0 0 clamp(25px, 2.3vw, 45px);
+			font-weight: $weight-medium;
+			font-size: clamp(14px, 1.25vw, 24px);
+			line-height: 1.5;
+			letter-spacing: clamp(0.05em, 0.15vw, 0.2em);
+			text-align: center;
+		}
 
-    &-break {
-      display: inline;
+		&-break {
+			display: inline;
 
-      @include mobile {
-        display: none;
-      }
-    }
-  }
+			@include mobile {
+				display: none;
+			}
+		}
+	}
 
-  &-form {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: min(100%, $subscribe-form-max-width);
-  }
+	&-form {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: min(100%, $subscribe-form-max-width);
+	}
 
-  &-input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: clamp(12px, 0.9vw, 16px) clamp(100px, 9vw, 140px)
-      clamp(12px, 0.9vw, 16px) clamp(16px, 1.25vw, 24px);
-    border: none;
-    outline: none;
-    border-radius: $radius-pill;
-    font-size: clamp(13px, 0.95vw, 16px);
-    letter-spacing: clamp(0.03em, 0.1vw, 0.1em);
-    color: $color-input-text;
-    background-color: $color-white;
+	&-input {
+		width: 100%;
+		box-sizing: border-box;
+		padding: clamp(12px, 0.9vw, 16px) clamp(100px, 9vw, 140px) clamp(12px, 0.9vw, 16px)
+			clamp(16px, 1.25vw, 24px);
+		border: none;
+		outline: none;
+		border-radius: $radius-pill;
+		font-size: clamp(13px, 0.95vw, 16px);
+		letter-spacing: clamp(0.03em, 0.1vw, 0.1em);
+		color: $color-input-text;
+		background-color: $color-white;
 
-    &::placeholder {
-      color: $color-placeholder;
-    }
-  }
+		&::placeholder {
+			color: $color-placeholder;
+		}
+	}
 
-  &-button {
-    position: absolute;
-    right: clamp(4px, 0.3vw, 6px);
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: $color-accent;
-    color: $color-white;
-    border: none;
-    padding: clamp(9px, 0.7vw, 12px) clamp(18px, 1.5vw, 28px);
-    border-radius: $radius-pill;
-    font-size: clamp(12px, 0.95vw, 16px);
-    font-weight: $weight-semibold;
-    letter-spacing: clamp(0.03em, 0.1vw, 0.1em);
-    cursor: pointer;
-    transition:
-      background-color $transition-fast,
-      transform $transition-fast;
+	&-button {
+		position: absolute;
+		right: clamp(4px, 0.3vw, 6px);
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: $color-accent;
+		color: $color-white;
+		border: none;
+		padding: clamp(9px, 0.7vw, 12px) clamp(18px, 1.5vw, 28px);
+		border-radius: $radius-pill;
+		font-size: clamp(12px, 0.95vw, 16px);
+		font-weight: $weight-semibold;
+		letter-spacing: clamp(0.03em, 0.1vw, 0.1em);
+		cursor: pointer;
+		transition:
+			background-color $transition-fast,
+			transform $transition-fast;
 
-    &:hover {
-      background-color: $color-primary-light;
-      transform: translateY(-50%);
-    }
-  }
+		&:hover {
+			background-color: $color-primary-light;
+			transform: translateY(-50%);
+		}
+	}
 }
 
 .footer {
-  width: 100%;
-  margin: 0 auto;
-  background-color: $color-footer;
-  min-height: 60vh;
-  display: grid;
-  @include grid-columns(3);
-  grid-template-rows: 1fr 1.2fr;
+	width: 100%;
+	margin: 0 auto;
+	background-color: $color-footer;
+	min-height: 60vh;
+	display: grid;
+	@include grid-columns(3);
+	grid-template-rows: 1fr 1.2fr;
 
-  @include desktop {
-    @include grid-columns(2);
-  }
+	@include desktop {
+		@include grid-columns(2);
+	}
 
-  @include mobile {
-    @include grid-columns(1);
-  }
+	@include mobile {
+		@include grid-columns(1);
+	}
 
-  &__content {
-    align-content: center;
-    padding: clamp(15px, 1.5vw, 30px);
-    border: 1px solid $color-text-secondary;
-    letter-spacing: $letter-spacing-medium;
-    text-align: center;
+	&__content {
+		align-content: center;
+		padding: clamp(15px, 1.5vw, 30px);
+		border: 1px solid $color-text-secondary;
+		letter-spacing: $letter-spacing-medium;
+		text-align: center;
 
-    &:nth-child(3n + 1) {
-      text-align: left;
-    }
+		&:nth-child(3n + 1) {
+			text-align: left;
+		}
 
-    &:nth-child(3n) {
-      text-align: right;
-    }
+		&:nth-child(3n) {
+			text-align: right;
+		}
 
-    @include desktop {
-      &:nth-child(odd) {
-        text-align: left;
-      }
+		@include desktop {
+			&:nth-child(odd) {
+				text-align: left;
+			}
 
-      &:nth-child(even) {
-        text-align: right;
-      }
-    }
+			&:nth-child(even) {
+				text-align: right;
+			}
+		}
 
-    @include mobile {
-      &:nth-child(odd),
-      &:nth-child(even) {
-        text-align: center;
-      }
-    }
+		@include mobile {
+			&:nth-child(odd),
+			&:nth-child(even) {
+				text-align: center;
+			}
+		}
 
-    &-title {
-      font-size: clamp(24px, 1.714vw, 33px);
-      font-family: $font-primary;
-      font-weight: $weight-medium;
-      color: $color-text-primary;
-      line-height: 2;
-    }
+		&-title {
+			font-size: clamp(24px, 1.714vw, 33px);
+			font-family: $font-primary;
+			font-weight: $weight-medium;
+			color: $color-text-primary;
+			line-height: 2;
+		}
 
-    &-text {
-      color: $color-text-secondary;
-      font-size: clamp(22px, 1.56vw, 30px);
-    }
+		&-text {
+			color: $color-text-secondary;
+			font-size: clamp(22px, 1.56vw, 30px);
+		}
 
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-  }
+		iframe {
+			width: 100%;
+			height: 100%;
+			border: 0;
+		}
+	}
 
-  &__payment-types {
-    display: grid;
-    grid-template-columns: repeat(3, clamp(90px, 6.25vw, 120px));
-    gap: clamp(10px, 0.78vw, 15px);
-    justify-content: end;
+	&__payment-types {
+		display: grid;
+		grid-template-columns: repeat(3, clamp(90px, 6.25vw, 120px));
+		gap: clamp(10px, 0.78vw, 15px);
+		justify-content: end;
 
-    @include mobile {
-      justify-content: center;
-    }
-  }
+		@include mobile {
+			justify-content: center;
+		}
+	}
 
-  &__payment-type {
-    height: clamp(55px, 3.65vw, 70px);
-    border: 1px solid $color-text-primary;
-    border-radius: $radius-medium;
+	&__payment-type {
+		height: clamp(55px, 3.65vw, 70px);
+		border: 1px solid $color-text-primary;
+		border-radius: $radius-medium;
 
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: contain;
-    }
-  }
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: contain;
+		}
+	}
 }

@@ -1,142 +1,142 @@
-@use "../../../utils/variables" as *;
-@use "../../../utils/mixins" as *;
+@use '../../../utils/variables' as *;
+@use '../../../utils/mixins' as *;
 
 .product {
-  min-height: calc(100vh - $header-height);
-  @include flex-column-center(center);
+	min-height: calc(100vh - $header-height);
+	@include flex-column-center(center);
 
-  section {
-    background-color: $color-surface;
-    width: $content-width;
-    height: calc(100vh - $header-height - 60px);
-    box-shadow: $shadow-section;
+	section {
+		background-color: $color-surface;
+		width: $content-width;
+		height: calc(100vh - $header-height - 60px);
+		box-shadow: $shadow-section;
 
-    @include flex-column-center(center);
+		@include flex-column-center(center);
 
-    @include tablet {
-      width: calc(100% - clamp(30px, 4vw, 60px));
-      margin-block: clamp(15px, 2vw, 30px);
-      padding-block: clamp(20px, 3vw, 30px);
-      height: auto;
-    }
-  }
+		@include tablet {
+			width: calc(100% - clamp(30px, 4vw, 60px));
+			margin-block: clamp(15px, 2vw, 30px);
+			padding-block: clamp(20px, 3vw, 30px);
+			height: auto;
+		}
+	}
 
-  &__container {
-    width: calc(100% - clamp(40px, 5vw, 100px));
-    display: grid;
-    @include grid-columns(2);
-    gap: clamp(30px, 4vw, 70px);
+	&__container {
+		width: calc(100% - clamp(40px, 5vw, 100px));
+		display: grid;
+		@include grid-columns(2);
+		gap: clamp(30px, 4vw, 70px);
 
-    @include tablet {
-      @include grid-columns(1);
-    }
-  }
+		@include tablet {
+			@include grid-columns(1);
+		}
+	}
 
-  &__picture {
-    img {
-      border-radius: $radius-large;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border: 2px solid $color-border-subtle;
-    }
-  }
+	&__picture {
+		img {
+			border-radius: $radius-large;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border: 2px solid $color-border-subtle;
+		}
+	}
 
-  &__info {
-    color: $color-primary;
-    font-family: $font-primary;
-    letter-spacing: $letter-spacing-medium;
-    @include flex-column-between;
-  }
+	&__info {
+		color: $color-primary;
+		font-family: $font-primary;
+		letter-spacing: $letter-spacing-medium;
+		@include flex-column-between;
+	}
 
-  &__title {
-    text-align: left;
-    font-weight: $weight-medium;
-    font-size: clamp(36px, 3.47vw, 50px);
-    margin-bottom: clamp(10px, 1vw, 15px);
-  }
+	&__title {
+		text-align: left;
+		font-weight: $weight-medium;
+		font-size: clamp(36px, 3.47vw, 50px);
+		margin-bottom: clamp(10px, 1vw, 15px);
+	}
 
-  &__description,
-  &__ingredients {
-    margin-bottom: clamp(10px, 1vw, 15px);
-    font-size: clamp(18px, 1.67vw, 24px);
-    font-weight: $weight-regular;
-  }
+	&__description,
+	&__ingredients {
+		margin-bottom: clamp(10px, 1vw, 15px);
+		font-size: clamp(18px, 1.67vw, 24px);
+		font-weight: $weight-regular;
+	}
 
-  &__buy {
-    @include flex-row-between(center);
-    padding-block: clamp(10px, 1vw, 15px);
-    border-top: $border-subtle;
-    border-bottom: $border-subtle;
-    margin-block: clamp(20px, 2vw, 30px);
-    font-size: clamp(18px, 1.67vw, 24px);
-  }
+	&__buy {
+		@include flex-row-between(center);
+		padding-block: clamp(10px, 1vw, 15px);
+		border-top: $border-subtle;
+		border-bottom: $border-subtle;
+		margin-block: clamp(20px, 2vw, 30px);
+		font-size: clamp(18px, 1.67vw, 24px);
+	}
 
-  &__quantity {
-    @include flex-row-between(center);
-    gap: clamp(10px, 1vw, 15px);
-  }
+	&__quantity {
+		@include flex-row-between(center);
+		gap: clamp(10px, 1vw, 15px);
+	}
 
-  &__meta {
-    @include flex-row-between;
-    font-size: clamp(20px, 1.94vw, 28px);
-    font-weight: $weight-medium;
-    border-bottom: $border-subtle;
-    padding-block: clamp(20px, 2vw, 30px);
-    @include mobile {
-      font-size: clamp(15px, 1.5vw, 20px);
-    }
-  }
+	&__meta {
+		@include flex-row-between;
+		font-size: clamp(20px, 1.94vw, 28px);
+		font-weight: $weight-medium;
+		border-bottom: $border-subtle;
+		padding-block: clamp(20px, 2vw, 30px);
+		@include mobile {
+			font-size: clamp(15px, 1.5vw, 20px);
+		}
+	}
 
-  &__nutrition {
-    width: 100%;
+	&__nutrition {
+		width: 100%;
 
-    h3 {
-      text-align: center;
-      font-size: clamp(22px, 1.94vw, 28px);
-      font-weight: $weight-semibold;
-      margin-bottom: clamp(15px, 1.3vw, 20px);
-      letter-spacing: $letter-spacing-nutrition-title;
-      color: $color-primary;
-    }
+		h3 {
+			text-align: center;
+			font-size: clamp(22px, 1.94vw, 28px);
+			font-weight: $weight-semibold;
+			margin-bottom: clamp(15px, 1.3vw, 20px);
+			letter-spacing: $letter-spacing-nutrition-title;
+			color: $color-primary;
+		}
 
-    &-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-family: $font-primary;
-      color: $color-primary-muted;
-      letter-spacing: $letter-spacing-regular;
+		&-table {
+			width: 100%;
+			border-collapse: collapse;
+			font-family: $font-primary;
+			color: $color-primary-muted;
+			letter-spacing: $letter-spacing-regular;
 
-      th {
-        font-weight: $weight-semibold;
-        padding-bottom: clamp(8px, 0.8vw, 12px);
-      }
+			th {
+				font-weight: $weight-semibold;
+				padding-bottom: clamp(8px, 0.8vw, 12px);
+			}
 
-      td {
-        font-weight: $weight-medium;
-      }
+			td {
+				font-weight: $weight-medium;
+			}
 
-      th,
-      td {
-        width: calc(100% / 5);
-        height: clamp(60px, 5.2vw, 80px);
-        text-align: center;
-        font-size: clamp(18px, 1.67vw, 24px);
-        border-bottom: $border-subtle;
-        @include mobile {
-          font-size: clamp(14px, 1.4vw, 18px);
-        }
+			th,
+			td {
+				width: calc(100% / 5);
+				height: clamp(60px, 5.2vw, 80px);
+				text-align: center;
+				font-size: clamp(18px, 1.67vw, 24px);
+				border-bottom: $border-subtle;
+				@include mobile {
+					font-size: clamp(14px, 1.4vw, 18px);
+				}
 
-        &:not(:last-child) {
-          border-right: $border-subtle;
-        }
+				&:not(:last-child) {
+					border-right: $border-subtle;
+				}
 
-        &:first-child {
-          text-align: left;
-          font-weight: $weight-semibold;
-          padding-left: 5px;
-        }
-      }
-    }
-  }
+				&:first-child {
+					text-align: left;
+					font-weight: $weight-semibold;
+					padding-left: 5px;
+				}
+			}
+		}
+	}
 }

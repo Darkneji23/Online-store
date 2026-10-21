@@ -1,86 +1,86 @@
-@use "../../utils/variables" as *;
-@use "../../utils/mixins" as *;
+@use '../../utils/variables' as *;
+@use '../../utils/mixins' as *;
 .header {
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  @include flex-row-between(center);
-  gap: $header-spacing;
-  width: 100%;
-  height: $header-height;
-  color: $color-primary;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	@include flex-row-between(center);
+	gap: $header-spacing;
+	width: 100%;
+	height: $header-height;
+	color: $color-primary;
 
-  @include mobile {
-    gap: 0px;
-    height: auto;
-  }
+	@include mobile {
+		gap: 0px;
+		height: auto;
+	}
 
-  &__brand {
-    @include flex-row-between(center);
-    flex: 7.5;
-    height: $header-element-height;
-    margin-left: $header-spacing;
-    padding-left: clamp(30px, 2vw, 50px);
-    border-radius: $radius-header-brand;
-    background-color: $color-header-background;
-    box-shadow: $shadow-header;
-    @include mobile {
-      text-align: center;
-      padding-inline: $header-spacing;
-      margin: 0;
-      box-shadow: none;
-      border-radius: 0;
-    }
+	&__brand {
+		@include flex-row-between(center);
+		flex: 7.5;
+		height: $header-element-height;
+		margin-left: $header-spacing;
+		padding-left: clamp(30px, 2vw, 50px);
+		border-radius: $radius-header-brand;
+		background-color: $color-header-background;
+		box-shadow: $shadow-header;
+		@include mobile {
+			text-align: center;
+			padding-inline: $header-spacing;
+			margin: 0;
+			box-shadow: none;
+			border-radius: 0;
+		}
 
-    h1 {
-      font-family: $font-primary;
-      font-size: clamp(16px, 2.5vw, 36px);
-      font-weight: $weight-medium;
-      letter-spacing: $letter-spacing-big;
-      @include mobile {
-        letter-spacing: $letter-spacing-regular;
-      }
-    }
-  }
-  &__navigation {
-    @include flex-row-center(center);
-    flex: 2.5;
-    height: $header-element-height;
-    margin-right: $header-spacing;
-    border-radius: $radius-header-navigation;
-    background-color: $color-header-background;
-    box-shadow: $shadow-header;
+		h1 {
+			font-family: $font-primary;
+			font-size: clamp(16px, 2.5vw, 36px);
+			font-weight: $weight-medium;
+			letter-spacing: $letter-spacing-big;
+			@include mobile {
+				letter-spacing: $letter-spacing-regular;
+			}
+		}
+	}
+	&__navigation {
+		@include flex-row-center(center);
+		flex: 2.5;
+		height: $header-element-height;
+		margin-right: $header-spacing;
+		border-radius: $radius-header-navigation;
+		background-color: $color-header-background;
+		box-shadow: $shadow-header;
 
-    @include mobile {
-      padding-inline: 5px;
-      margin: 0;
-      box-shadow: none;
-      border-radius: 0;
-    }
+		@include mobile {
+			padding-inline: 5px;
+			margin: 0;
+			box-shadow: none;
+			border-radius: 0;
+		}
 
-    ul {
-      margin-inline: $header-navigation-spacing;
-      @include flex-row-around(center);
-      width: 100%;
-      gap: $header-navigation-spacing;
+		ul {
+			margin-inline: $header-navigation-spacing;
+			@include flex-row-around(center);
+			width: 100%;
+			gap: $header-navigation-spacing;
 
-      @include mobile {
-        li:nth-child(3) {
-          display: none;
-        }
-      }
-    }
-    a {
-      @include flex-row-between(center);
+			@include mobile {
+				li:nth-child(3) {
+					display: none;
+				}
+			}
+		}
+		a {
+			@include flex-row-between(center);
 
-      width: $header-navigation-icon-size;
-      height: $header-navigation-icon-size;
-      font-size: $header-navigation-icon-size;
-      transition: color $transition-fast;
+			width: $header-navigation-icon-size;
+			height: $header-navigation-icon-size;
+			font-size: $header-navigation-icon-size;
+			transition: color $transition-fast;
 
-      &:hover {
-        color: $color-primary-light;
-      }
-    }
-  }
+			&:hover {
+				color: $color-primary-light;
+			}
+		}
+	}
 }

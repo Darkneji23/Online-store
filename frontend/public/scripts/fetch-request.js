@@ -1,8 +1,8 @@
-const menuItems = document.querySelector("#menuItems");
+const menuItems = document.querySelector('#menuItems');
 if (!menuItems) {
-    throw new Error("Menu container not found");
+    throw new Error('Menu container not found');
 }
-fetch("http://localhost:3000/products")
+fetch('http://localhost:3000/products')
     .then((res) => {
     if (!res.ok) {
         throw new Error(`HTTP error: ${res.status}`);
@@ -11,8 +11,8 @@ fetch("http://localhost:3000/products")
 })
     .then((data) => {
     data.forEach((product) => {
-        const card = document.createElement("article");
-        card.classList.add("menu__card");
+        const card = document.createElement('article');
+        card.classList.add('menu__card');
         card.innerHTML = `
         <span class="menu__card-info">
           <a href="/pages/card-info.html?id=${product.id}">
@@ -63,7 +63,7 @@ fetch("http://localhost:3000/products")
     });
 })
     .catch((error) => {
-    console.error("Error fetching products:", error);
+    console.error('Error fetching products:', error);
 });
 export {};
 //# sourceMappingURL=fetch-request.js.map

@@ -1,11 +1,11 @@
-@use "../../shared/header";
-@use "../../../utils/variables" as *;
+@use '../../shared/header';
+@use '../../../utils/variables' as *;
 
 .header {
-  position: static;
+	position: static;
 
-  &__brand,
-  &__navigation {
-    background-color: $color-white;
-  }
+	&__brand,
+	&__navigation {
+		background-color: $color-white;
+	}
 }

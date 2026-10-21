@@ -1,43 +1,43 @@
 type Product = {
-  id: number;
-  name: string;
-  slug: string;
-  description: string;
-  ingredients: string[];
-  weight: number;
-  calories: number;
-  protein: number;
-  carbs: number;
-  fat: number;
-  price: number;
-  image: string;
+	id: number;
+	name: string;
+	slug: string;
+	description: string;
+	ingredients: string[];
+	weight: number;
+	calories: number;
+	protein: number;
+	carbs: number;
+	fat: number;
+	price: number;
+	image: string;
 };
 
 type ProductsResponse = {
-  products: Product[];
+	products: Product[];
 };
 
-const menuItems = document.querySelector("#menuItems");
+const menuItems = document.querySelector('#menuItems');
 
 if (!menuItems) {
-  throw new Error("Menu container not found");
+	throw new Error('Menu container not found');
 }
 
-fetch("http://localhost:3000/products")
-  .then((res: Response) => {
-    if (!res.ok) {
-      throw new Error(`HTTP error: ${res.status}`);
-    }
+fetch('http://localhost:3000/products')
+	.then((res: Response) => {
+		if (!res.ok) {
+			throw new Error(`HTTP error: ${res.status}`);
+		}
 
-    return res.json();
-  })
-  .then((data: Product[]) => {
-    data.forEach((product) => {
-      const card = document.createElement("article");
+		return res.json();
+	})
+	.then((data: Product[]) => {
+		data.forEach((product) => {
+			const card = document.createElement('article');
 
-      card.classList.add("menu__card");
+			card.classList.add('menu__card');
 
-      card.innerHTML = `
+			card.innerHTML = `
         <span class="menu__card-info">
           <a href="/pages/card-info.html?id=${product.id}">
             <i class="fa-solid fa-circle-info"></i>
@@ -84,9 +84,9 @@ fetch("http://localhost:3000/products")
         </div>
       `;
 
-      menuItems.appendChild(card);
-    });
-  })
-  .catch((error: Error) => {
-    console.error("Error fetching products:", error);
-  });
+			menuItems.appendChild(card);
+		});
+	})
+	.catch((error: Error) => {
+		console.error('Error fetching products:', error);
+	});

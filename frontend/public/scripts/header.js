@@ -9,10 +9,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 function loadHeader() {
     return __awaiter(this, void 0, void 0, function* () {
-        const header = document.querySelector("#header");
+        const header = document.querySelector('#header');
         if (!header)
             return;
-        const response = yield fetch("../components/header.html");
+        const response = yield fetch('../components/header.html');
         const html = yield response.text();
         header.innerHTML = html;
     });
